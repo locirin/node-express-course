@@ -7,11 +7,13 @@ const {
   getTask,
   updateTask,
   deleteTask,
+  // editTask,
 } = require("../controllers/tasks");
 
 // import controllers goes here later
 
 router.route("/").get(getAllTasks).post(createTask);
 router.route("/:id").get(getTask).patch(updateTask).delete(deleteTask);
+// .put(editTask);
 
 module.exports = router;
